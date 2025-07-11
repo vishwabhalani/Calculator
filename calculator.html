@@ -1,0 +1,47 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial scale=1.0">
+	<title>calculator</title>
+	<link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+	<div class="colors">
+		<div class="calculator">
+			<form>
+				<div class="display">
+					<input type="text" name="display" style="width: 100%;height: 20%; display: flex; text-align: right; border: 0; outline: 0; font-size: 30px; box-shadow: none;">
+				</div>
+				<div>
+					<input type="button" value="AC" onclick="display.value=''" style="font-weight: bold; color: skyblue;">
+					<input type="button" value="DE" onclick="display.value=display.value.toString().slice(0,-1)" style="font-weight: bold; color: skyblue;">
+					<input type="button" value="." onclick="display.value+='.'">
+					<input type="button" value="/" onclick="display.value+='/'">
+				</div>
+				<div>
+					<input type="button" value="7" onclick="display.value+='7'">
+					<input type="button" value="8" onclick="display.value+='8'">
+					<input type="button" value="9" onclick="display.value+='9'">
+					<input type="button" value="*" onclick="display.value+='*'">
+				</div>
+				<div>
+					<input type="button" value="4" onclick="display.value+='4'">
+					<input type="button" value="5" onclick="display.value+='5'">
+					<input type="button" value="6" onclick="display.value+='6'">
+					<input type="button" value="-" onclick="display.value+='-'">
+				</div>
+				<div>
+					<input type="button" value="1" onclick="display.value+='1'">
+					<input type="button" value="2" onclick="display.value+='2'">
+					<input type="button" value="3" onclick="display.value+='3'">
+					<input type="button" value="+" onclick="display.value+='+'">
+				</div>
+				<div>
+					<input type="button" value="00" onclick="display.value+='00'">
+					<input type="button" value="0" onclick="display.value+='0'">
+					<input type="button" value="=" style="width: 46%; background-color: darkorange; font-size: 27px; font-weight: bold;" onclick="display.value=eval(display.value)">
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
